@@ -25,8 +25,8 @@ jobs:
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
     - name: Sandip
-      run: mv .env .env
+      run: mv .env .env1
     - name: Baliram
-      run: mv .env .env
+      run: mv .env .env2
     - name: Tawhare
-      run: mv .env .env
+      run: mv .env .env3
