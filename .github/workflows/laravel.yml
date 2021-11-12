@@ -33,8 +33,6 @@ jobs:
 
           cd /var/www/html/demo
 
-          git checkout -f 
-
           git pull
 
     # steps:
