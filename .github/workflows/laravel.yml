@@ -26,9 +26,9 @@ jobs:
 
           key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-          # script: |
+          script: |
 
-          #   cd /var/www/html/demo
+            cd /var/www/html/demo
 
           #   sudo chown -R $USER:www-data storage
 
@@ -51,7 +51,7 @@ jobs:
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Dependencies
-        run: composer install --no-dev # -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer install --no-dev -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
       # - name: Pull The Code
       #   run: git pull
       - name: Generate key
