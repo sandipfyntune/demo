@@ -30,7 +30,7 @@ jobs:
 
             cd /var/www/html/demo
 
-            php artisan down
+            php artisan up
 
           #   sudo chown -R $USER:www-data storage
 
