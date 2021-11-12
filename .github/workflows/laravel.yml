@@ -54,7 +54,7 @@ jobs:
       # - name: Take A pull
       - run: ls
       - name: Copy .env
-        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+        run: php -r "file_exists('.env') || copy('.env.example', '.env123');"
       - name: Install Dependencies
         run: composer install --no-dev -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
       - name: Pull The Code
