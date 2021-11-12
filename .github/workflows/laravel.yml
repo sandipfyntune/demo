@@ -31,7 +31,7 @@ jobs:
 
         script: |
 
-          cd /var/www/html/
+          cd /var/www/html/demo
 
           git checkout -f 
 
