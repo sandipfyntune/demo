@@ -39,7 +39,7 @@ jobs:
           
           sudo chmod -R 775 storage
           
-          sudo chmod -R 755 bootstrap/cache
+          sudo chmod -R 775 bootstrap/cache
 
 
           git pull
