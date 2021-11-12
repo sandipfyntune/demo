@@ -11,18 +11,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    - name: Deployment
-
-      uses: appleboy/ssh-action@main
-
-      with:
-
-        host: ${{ secrets.SSH_HOST }}
-
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-        username: ${{ secrets.SSH_USERNAME }}
-
     steps:
     - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
       with:
