@@ -33,6 +33,15 @@ jobs:
 
           cd /var/www/html/demo
 
+          sudo chown -R $USER:www-data storage
+          
+          sudo chown -R $USER:www-data bootstrap/cache
+          
+          sudo chmod -R 775 storage
+          
+          sudo chmod -R 755 bootstrap/cache
+
+
           git pull
 
           php artisan optimize:clear
@@ -46,21 +55,14 @@ jobs:
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
-      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-    - name: Generate key
-      run: php artisan key:generate
-    - name: Directory Permissions
-      run: sudo chown -R $USER:www-data storage
-    - name: Directory Permissions
-      run: sudo chown -R $USER:www-data bootstrap/cache
-    - name: Directory Permissions
-      run: sudo chmod -R 775 storage 
-    - name: Directory Permissions
-      run: sudo chmod -R 755 bootstrap/cache
-
-    - name: Sandip
-      run: echo "12345"
-    - name: Baliram
-      run: echo "12345"
-    - name: Tawhare
-      run: echo "12345"
+      run: composer install --no-dev -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+    # - name: Generate key
+    #   run: php artisan key:generate
+    # - name: Directory Permissions
+    #   run: sudo chown -R $USER:www-data storage
+    # - name: Directory Permissions
+    #   run: sudo chown -R $USER:www-data bootstrap/cache
+    # - name: Directory Permissions
+    #   run: sudo chmod -R 775 storage 
+    # - name: Directory Permissions
+    #   run: sudo chmod -R 755 bootstrap/cache
