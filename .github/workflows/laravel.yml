@@ -41,7 +41,7 @@ jobs:
           #   git pull
 
           #   php artisan optimize:clear
-          php artisan down
+            php artisan down
 
       # steps:
       - run: git pull
