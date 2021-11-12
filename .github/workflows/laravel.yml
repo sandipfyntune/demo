@@ -45,11 +45,12 @@ jobs:
           #   php artisan optimize:clear
 
       # steps:
-      - run: git pull
+     
       - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
         with:
           php-version: "7.4"
       - uses: actions/checkout@v2
+      - run: git pull
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Dependencies
