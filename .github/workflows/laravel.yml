@@ -64,3 +64,5 @@ jobs:
         run: sudo chmod -R 775 storage
       - name: Directory Permissions
         run: sudo chmod -R 755 bootstrap/cache
+      - name: Directory Permissions
+        run: php artisan down
