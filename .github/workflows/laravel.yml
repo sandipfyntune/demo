@@ -31,7 +31,7 @@ jobs:
 
             cd /var/www/html/demo
 
-            php artisan up
+            # php artisan up
 
           #   sudo chown -R $USER:www-data storage
 
@@ -50,7 +50,8 @@ jobs:
       - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
         with:
           php-version: "7.4"
-      # - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - name: Take A pull
       - run: git pull
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
@@ -69,4 +70,4 @@ jobs:
       - name: Directory Permissions
         run: sudo chmod -R 755 bootstrap/cache
       - name: Directory Permissions
-        run: php artisan down
+        run: php artisan r:l
