@@ -19,15 +19,15 @@ jobs:
 
     - name: Deployment
 
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@main
 
       with:
 
         host: ${{ secrets.SSH_HOST }}
 
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-
         username: ${{ secrets.SSH_USERNAME }}
+
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
 
         script: |
 
