@@ -10,7 +10,7 @@ jobs:
     run-on: ubuntu-latest
     steps: 
       - uses: action/checkout@v2
-      - name: Compile CSS AND JAVASCRIPT
-      run: |
-        npm i
+      - name: Compile CSS and Javascript
+        run: |
+        npm install
         npm run prod
