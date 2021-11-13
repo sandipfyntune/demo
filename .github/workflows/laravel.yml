@@ -53,27 +53,27 @@ jobs:
 
       # steps:
 
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: "7.4"
-      # - uses: actions/checkout@v2
-      # - name: Take A pull
-      - run: ls
-      - name: Copy .env
-        run: php -r "file_exists('.env') || copy('.env.example', '.env123');"
-      - name: Install Dependencies
-        run: composer install --no-dev -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-      - name: Pull The Code
-        run: git pull
-      - name: Generate key
-        run: php artisan key:generate
-      - name: Directory Permissions
-        run: sudo chown -R $USER:www-data storage
-      - name: Directory Permissions
-        run: sudo chown -R $USER:www-data bootstrap/cache
-      - name: Directory Permissions
-        run: sudo chmod -R 775 storage
-      - name: Directory Permissions
-        run: sudo chmod -R 755 bootstrap/cache
-      - name: Directory Permissions
-        run: php artisan r:l
+      # - uses: shivammathur/setup-php@v2
+      #   with:
+      #     php-version: "7.4"
+      # # - uses: actions/checkout@v2
+      # # - name: Take A pull
+      # - run: ls
+      # - name: Copy .env
+      #   run: php -r "file_exists('.env') || copy('.env.example', '.env123');"
+      # - name: Install Dependencies
+      #   run: composer install --no-dev -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      # - name: Pull The Code
+      #   run: git pull
+      # - name: Generate key
+      #   run: php artisan key:generate
+      # - name: Directory Permissions
+      #   run: sudo chown -R $USER:www-data storage
+      # - name: Directory Permissions
+      #   run: sudo chown -R $USER:www-data bootstrap/cache
+      # - name: Directory Permissions
+      #   run: sudo chmod -R 775 storage
+      # - name: Directory Permissions
+      #   run: sudo chmod -R 755 bootstrap/cache
+      # - name: Directory Permissions
+      #   run: php artisan r:l
