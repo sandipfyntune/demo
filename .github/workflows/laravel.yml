@@ -32,7 +32,7 @@ jobs:
             cd /var/www/html/demo
 
             php artisan down --message "Application is now in maintenance mode."
-            git pull origin dev
+            git pull
             sudo chown -R $USER:www-data storage bootstrap/cache
             # sudo chown -R $USER:www-data bootstrap/cache
             sudo chmod -R 775 storage bootstrap/cache
