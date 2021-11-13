@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Sandip Tawhare 
+                    Sandip B. Tawhare 
                 </div>
 
                 <div class="links">
