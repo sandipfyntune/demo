@@ -1,0 +1,9 @@
+on:
+  push:
+    branches:
+      - master
+
+
+jobs:
+  create-delelopment-artifacts:
+    name: Create Development Artifacts
