@@ -7,3 +7,7 @@ on:
 jobs:
   create-delelopment-artifacts:
     name: Create Development Artifacts
+    run-on: ubuntu-latest
+    steps: |
+      npm i
+      npm run prod
